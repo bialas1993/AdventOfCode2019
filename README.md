@@ -8,4 +8,4 @@ I might use various languages to provide solutions... will see how it goes ;).
 
 | Day | Name                                                         |                                Languages                              | Status |
 |:---:|:-------------------------------------------------------------|:----------------------------------------------------------------------:|:------:|
-| 01  | The Tyranny of the Rocket Equation                           | [Dart](lib/bin/day01/day01a.dart) / [Dart](lib/bin/day01/day01b.dart)  |    ✔   |
+| 01  | The Tyranny of the Rocket Equation                           | [Dart](bin/day01/day01a.dart) / [Dart](bin/day01/day01b.dart)  |    ✔   |

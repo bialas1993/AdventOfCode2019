@@ -11,44 +11,37 @@ main(List<String> arguments) async {
 
   if (await file.exists()) {
     stack = List<int>.from((await file.readAsString()).toString().split(',').map((f) => int.parse(f)));
-
-    // 4bit instruction [add, index first data, index secod data, output index]
-
     //before crash
     stack[1] = 12;
     stack[2] = 2;
-    //
 
-    for (var i=0; i < stack.length; i=i+4) {
-      print('operation: ${stack[i]} ; val: ${stack[i+1]}, ${stack[i+2]}, out: ${stack[i+3]}');
-      print("----");
-      execute(stack[i], stack[i+1], stack[i+2], stack[i+3]);
-    }
-
+    print('Solution: ${execute(stack)}');
+    
     return;
   }
 
   throw("Can not read input file.");
 }
 
-void execute(int opcode, int i1, int i2, int output) {
-  switch (opcode) {
-    case CODE_ADD:
-    {
-      stack[output] = stack[i1] + stack[i2];
+int execute(List<int> stack) {
+  for (var i=0; i < stack.length; i=i+4) {
+    switch (stack[i]) {
+      case CODE_ADD:
+      {
+        stack[stack[i+3]] = stack[stack[i+1]] + stack[stack[i+2]];
+      }
+      break;
+      case CODE_MULTIPLE:
+      {
+        stack[stack[i+3]] = stack[stack[i+1]] * stack[stack[i+2]];
+      }
+      break;
+      case CODE_EXIT:
+      {
+        return stack[0];
+      }
     }
-    break;
-    case CODE_MULTIPLE:
-    {
-      stack[output] = stack[i1] * stack[i2];
-    }
-    break;
-    case CODE_EXIT:
-    {
-      print('First element: ${stack[0]}');
-      print(stack);
-      exit(1);
-    }
-    break;
   }
+
+  return 0;
 }

@@ -3,9 +3,7 @@ import 'dart:math';
 
 int manhattanDistance(Point<int> point) => point.x.abs() + point.y.abs();
 
-typedef moveOperation = Point<int> Function(Point<int> point);
-
-final Map<String, moveOperation> moveOperationMap = {
+final Map<String, Point<int> Function(Point<int> point)> movesMap = {
   'U': (Point<int> point) => Point(point.x, point.y + 1),
   'D': (Point<int> point) => Point(point.x, point.y - 1),
   'L': (Point<int> point) => Point(point.x - 1, point.y),
@@ -18,18 +16,18 @@ Map<Point<int>, int> findIntersections(List<String> input) {
 
   for (final line in input) {
     final points = <Point<int>, int>{};
-    var currentPoint = const Point(0, 0);
-    var currentDistance = 0;
+    var currPosition = const Point(0, 0);
+    var distance = 0;
 
     for (final instruction in line.split(',')) {
-      final move = moveOperationMap[instruction[0]];
+      final move = movesMap[instruction.substring(0,1)];
       final length = int.parse(instruction.substring(1));
 
       for (var i = 0; i < length; i++) {
-        currentPoint = move(currentPoint);
-        currentDistance++;
-        if (!points.containsKey(currentPoint)) {
-          points[currentPoint] = currentDistance;
+        currPosition = move(currPosition);
+        distance++;
+        if (!points.containsKey(currPosition)) {
+          points[currPosition] = distance;
         }
       }
     }

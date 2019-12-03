@@ -10,4 +10,4 @@ I might use various languages to provide solutions... will see how it goes ;).
 |:---:|:-------------------------------------------------------------|:---------------------------------------------------------------------:|:------:|
 | 01  | The Tyranny of the Rocket Equation                           | [Dart](bin/day01/day01a.dart) / [Dart](bin/day01/day01b.dart)         |    ✔   |
 | 02  | 1202 Program Alarm                                           | [Dart](bin/day02/day02a.dart) / [Dart](bin/day02/day02b.dart)         |    ✔   |
-| 03  | Crossed Wires                                                | [Dart](bin/day03/day03a.dart) / [Dart](bin/day03/day03b.dart)         |    x   |
+| 03  | Crossed Wires                                                | [Dart](bin/day03/day03.dart)                                               |    ✔   |

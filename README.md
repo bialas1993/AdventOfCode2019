@@ -13,4 +13,5 @@ I might use various languages to provide solutions... will see how it goes ;).
 | 03  | Crossed Wires                                                | [Dart](bin/day03/day03.dart)                                          |    ✔   |
 | 04  | Secure Container                                             | [Dart](bin/day04/day04.dart)                                          |    ✔   |
 | 05  | Sunny with a Chance of Asteroids                             | [Dart](bin/day05/day05.dart)                                          |    ✔   |
-| 06  | Universal Orbit Map                                          | [Dart](bin/day06/day06.dart)                                          |    x   |
+| 06  | Universal Orbit Map                                          | [Dart](bin/day06/day06.dart)                                          |    ✔   |
+| 07  | Amplification Circuit                                        | [Dart](bin/day07/day07.dart)                                          |    x   |

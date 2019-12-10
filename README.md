@@ -14,4 +14,5 @@ I might use various languages to provide solutions... will see how it goes ;).
 | 04  | Secure Container                                             | [Dart](bin/day04/day04.dart)                                          |    ✔   |
 | 05  | Sunny with a Chance of Asteroids                             | [Dart](bin/day05/day05.dart)                                          |    ✔   |
 | 06  | Universal Orbit Map                                          | [Dart](bin/day06/day06.dart)                                          |    ✔   |
-| 07  | Amplification Circuit                                        | [Dart](bin/day07/day07.dart)                                          |    x   |
+| 07  | Amplification Circuit                                        | [Dart](bin/day07/day07.dart)                                          |    ✔   |
+| 08  | Space Image Format                                           | [Dart](bin/day08/day08.dart)                                          |    x   |
